@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import firebase from 'firebase';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit 1<code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+    const firebaseConfig = {
+      apiKey: "AIzaSyCr5mCRt9bGwobghuPfnWQ-sxEUt0g5GiE",
+      authDomain: "reactapp-3c196.firebaseapp.com",
+      databaseURL: "https://reactapp-3c196.firebaseio.com",
+      projectId: "reactapp-3c196",
+      storageBucket: "reactapp-3c196.appspot.com",
+      messagingSenderId: "369452747759",
+      appId: "1:369452747759:web:0880d7aa90bb644382041a",
+      measurementId: "G-EH2JH8GS7Y"
+    };
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+  }
+  }
+
+  render() {
+    return (
+      <div>rjs123</div>
+    )
+  }
 }
 
-export default App;
